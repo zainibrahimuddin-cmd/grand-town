@@ -1,41 +1,54 @@
 # Grand Town
 
-A family-friendly 3D open-world city game that runs in the browser. Drive any car around an island city, deliver pizzas, win street races, find 30 gold stars, and try not to get a speeding ticket.
+A family-friendly 3D open-world city game that runs in the browser. Drive any car anywhere in an island city, take on missions, chat with the locals and walk into shops, an arcade and your own apartment.
 
-No weapons and no fighting. Pedestrians hop out of the way, and the worst thing the police do is write you a ticket. Suitable for players 16 and under.
+No weapons and no fighting. Pedestrians dive out of the way of reckless drivers, and the worst the police do is write you a ticket. Suitable for players 16 and under.
 
-## Play
-
-Open `index.html` in a modern browser (Chrome, Edge, Firefox or Safari). It needs an internet connection to load three.js and the fonts from a CDN.
+**Play it:** https://zainibrahimuddin-cmd.github.io/grand-town/
 
 ## Controls
 
 | Key | Action |
 | --- | --- |
 | W A S D / arrow keys | Drive or walk |
-| E | Hop in or out of a car |
+| E | Hop in or out of a car, open doors, talk to people, use things |
+| M | Map and missions (the game pauses) |
 | Space | Handbrake (in a car) or jump (on foot) |
 | Shift | Run |
 | Mouse drag | Look around |
 | T (hold) | Fast-forward time |
 
-On touchscreens, on-screen buttons appear for steering, gas, brake and E.
+On phones and tablets, on-screen buttons appear for steering, gas, brake and E, plus a Map button.
 
-## Things to do
+## Missions
 
-- **Tony's Pizza** (orange marker): pick up an order and deliver it to the green marker before the timer runs out. Faster deliveries earn bigger tips.
-- **Street race** (purple marker): get in a car, then drive through every checkpoint. Beat the target time for the top prize.
-- **Gold stars**: 30 are hidden around the city. Find them all for a $1,000 bonus.
-- **Police**: crashing into other cars earns wanted stars and police cars come after you. Stay away from them to escape, or get pulled over and pay a $100 ticket.
+Open the map with **M** to see every mission, set a GPS route, or click anywhere on the map to drop your own waypoint.
 
-## Features
+- **Pizza Rush** (Tony's Pizza): deliver a hot pizza before it goes cold. Faster deliveries earn bigger tips. Talk to Tony inside the shop or drive into the orange marker.
+- **Street Race**: bring a car and hit every checkpoint. Beat the par time for the top prize.
+- **Taxi Fares** (Rosa's cab stand): pick up three passengers and drive them to their stops. A real taxi earns 50% more.
+- **Parcel Courier** (QuickShip depot): drop off three parcels around town, in any order, before time runs out.
+- **Lost Puppy** (Mia, in the park): find Biscuit in the search area and walk him home.
+- **Star Hunter**: find all 30 gold stars hidden around town.
 
-- A procedurally built city of 36 blocks: skyscrapers, a park with a pond, a fountain plaza, trees, street lamps and water.
-- Real-time shadows, sky lighting and reflections, glossy car paint and bloom.
-- A full day/night cycle with lit windows, glowing street lamps and car headlights.
-- Traffic that follows lanes and turns at intersections, plus police that track you through the street grid.
-- A rotating minimap, speedometer, clock, and sound effects.
+## Places you can go inside
+
+- **Tony's Pizza**: talk to Tony for a delivery job.
+- **Corner Market**: buy an energy bar to run faster for a minute.
+- **Pixel Palace Arcade**: play the cabinets and try to beat the high score.
+- **Your apartment**: sleep until morning (this saves the game and clears your wanted level), change your outfit or watch the news.
+
+## The city
+
+- Drive on roads, pavements, parks and plazas. Buildings and trees stop you, but lamp posts, bins, mailboxes and hydrants get knocked over (hydrants spray water).
+- Pedestrians walk the pavements, comment as you pass, chat when you press E, and dive out of the way of cars. Nearly hitting someone gets the police interested.
+- Traffic follows the lanes, stops at red lights and honks if you block it.
+- Crash into cars to raise your wanted level. Escape the police, or hide inside a building to lose them faster.
+
+## Graphics
+
+Procedural brick, stone, plaster and glass buildings with shopfronts, awnings, fire escapes and balconies; leafy trees; ambient occlusion, soft shadows, sky lighting, drifting clouds, sun glare and a full day/night cycle. Phones automatically use a lighter graphics mode, and a Graphics button switches between high and low.
 
 ## Built with
 
-[three.js](https://threejs.org/) r160, in a single HTML file with no build step.
+[three.js](https://threejs.org/) r160, in a single HTML file with no build step. Progress (money, stars, missions completed) is saved in your browser.
