@@ -15,10 +15,10 @@ No weapons and no fighting. Pedestrians dive out of the way of reckless drivers,
 | M | Map and missions (the game pauses) |
 | Space | Handbrake (in a car) or jump (on foot) |
 | Shift | Run |
-| Mouse drag | Look around |
+| Mouse | Look around. Click the game to capture the mouse, Esc to release it |
 | T (hold) | Fast-forward time |
 
-On phones and tablets, on-screen buttons appear for steering, gas, brake and E, plus a Map button.
+On phones and tablets, swipe to look around; on-screen buttons appear for steering, gas, brake and E, plus a Map button.
 
 ## Missions
 

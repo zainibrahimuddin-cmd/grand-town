@@ -187,7 +187,7 @@ html, body { height: 100%; overflow: hidden; background: var(--ink); color: var(
       <div><kbd>E</kbd>Hop in / out of a car</div>
       <div><kbd>Space</kbd>Handbrake / jump</div>
       <div><kbd>Shift</kbd>Run</div>
-      <div><kbd>Drag</kbd>Look around</div>
+      <div><kbd>Mouse</kbd>Look around (click to capture, Esc to release)</div>
       <div><kbd>T</kbd>Fast-forward time</div>
       <div><kbd>M</kbd>Map and missions</div>
     </div>
@@ -1635,9 +1635,34 @@ document.querySelectorAll('#touch button').forEach(b => {
 });
 let dragYaw = 0, dragPitch = 0, dragging = false, dragIdle = 9, lastX = 0, lastY = 0;
 const cv = renderer.domElement;
-cv.addEventListener('pointerdown', e => { dragging = true; lastX = e.clientX; lastY = e.clientY; cv.setPointerCapture(e.pointerId); });
+// desktop: mouse look via pointer lock (click the game to capture the mouse, Esc to release)
+// touch screens: swipe to look, as before
+const mouseLook = !matchMedia('(pointer: coarse)').matches;
+const MOUSE_SENS = 0.0024;
+const locked = () => document.pointerLockElement === cv;
+let hoverLook = false; // fallback when the browser refuses pointer lock: plain mouse movement over the game turns the camera
+document.addEventListener("pointerlockerror", () => { hoverLook = true; });
+function lockPointer() {
+  if (!mouseLook || !game.started || game.menuOpen || locked()) return;
+  try { const p = cv.requestPointerLock(); if (p && p.catch) p.catch(() => { hoverLook = true; }); } catch (e) { hoverLook = true; }
+}
+function look(dx, dy) {
+  if (player.car) dragYaw -= dx * MOUSE_SENS; // swing the camera around the car; it recentres when you stop
+  else { player.heading -= dx * MOUSE_SENS; camYaw -= dx * MOUSE_SENS; } // on foot the mouse turns you
+  dragPitch = clamp(dragPitch + dy * MOUSE_SENS * 1.6, -1.2, 2.5);
+  dragIdle = 0;
+}
+cv.addEventListener('click', lockPointer);
+document.addEventListener("mousemove", e => {
+  if (locked()) look(e.movementX || 0, e.movementY || 0);
+  else if (hoverLook && mouseLook && game.started && !game.menuOpen && e.target === cv && !dragging) look(e.movementX || 0, e.movementY || 0);
+});
+document.addEventListener('pointerlockchange', () => {
+  if (!locked() && !hoverLook && game.started && !game.menuOpen && mouseLook) toast('Mouse released', 'Click the game to look around with the mouse again', '#aab4c8', 2200);
+});
+cv.addEventListener('pointerdown', e => { if (locked()) return; dragging = true; lastX = e.clientX; lastY = e.clientY; cv.setPointerCapture(e.pointerId); });
 cv.addEventListener('pointermove', e => {
-  if (!dragging) return;
+  if (!dragging || locked()) return;
   dragYaw -= (e.clientX - lastX) * 0.006; dragPitch = clamp(dragPitch + (e.clientY - lastY) * 0.01, -1.5, 3);
   lastX = e.clientX; lastY = e.clientY; dragIdle = 0;
 });
@@ -1712,7 +1737,7 @@ function updateCamera(dt, t) {
   const head = c ? c.heading + (c.speed < -2 ? Math.PI : 0) : player.heading;
   camYaw += wrapAngle(head - camYaw) * Math.min(1, dt * (c ? 3 : 4.5));
   dragIdle += dt;
-  if (dragIdle > 1.4 && !dragging) { dragYaw *= 1 - Math.min(1, dt * 2.5); dragPitch *= 1 - Math.min(1, dt * 2.5); }
+  if (dragIdle > 1.4 && !dragging) { dragYaw *= 1 - Math.min(1, dt * 2.5); if (!(locked() && !c)) dragPitch *= 1 - Math.min(1, dt * 2.5); }
   const yaw = camYaw + dragYaw, spd = c ? Math.abs(c.speed) : 0;
   const inRoom = game.inside;
   const dist = inRoom ? 4.3 : c ? 10.5 + spd * 0.07 : 6.2, h = (inRoom ? 1.9 : c ? 4 : 2.6) + dragPitch * (inRoom ? 0.5 : 2);
@@ -2108,8 +2133,8 @@ function renderMenu() {
   $('menuNote').textContent = 'Click the map to drop your own waypoint.';
   drawBigMap();
 }
-function openMenu() { if (!game.started) return; game.menuOpen = true; $('menu').hidden = false; renderMenu(); for (const k in keys) keys[k] = false; }
-function closeMenu() { game.menuOpen = false; $('menu').hidden = true; }
+function openMenu() { if (!game.started) return; game.menuOpen = true; if (locked()) document.exitPointerLock(); $("menu").hidden = false; renderMenu(); for (const k in keys) keys[k] = false; }
+function closeMenu() { game.menuOpen = false; $("menu").hidden = true; lockPointer(); }
 addEventListener('keydown', e => {
   if (e.code === 'KeyM' || (e.code === 'Escape' && game.menuOpen)) { game.menuOpen ? closeMenu() : openMenu(); }
 });
@@ -2568,7 +2593,7 @@ function step(dt) {
 frame();
 
 $('play').addEventListener('click', () => {
-  $('start').hidden = true; game.started = true; initAudio();
+  $('start').hidden = true; game.started = true; initAudio(); lockPointer();
   camera.position.set(player.pos.x + 6, 4, player.pos.z); camYaw = player.heading;
   toast('Welcome to Grand Town', 'Press M (or the Map button) to see missions. Walk up to people and press E to chat.', 'var(--sun)', 4800);
 });
