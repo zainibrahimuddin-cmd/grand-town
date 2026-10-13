@@ -47,7 +47,16 @@ Open the map with **M** to see every mission, set a GPS route, or click anywhere
 
 ## Graphics
 
-Procedural brick, stone, plaster and glass buildings with shopfronts, awnings, fire escapes and balconies; leafy trees; ambient occlusion, soft shadows, sky lighting, drifting clouds, sun glare and a full day/night cycle. Phones automatically use a lighter graphics mode, and a Graphics button switches between high and low.
+- Every window has a 3D room behind it (walls, floor, furniture, office ceiling lights) that lights up at night.
+- Weather changes by itself: sunny, cloudy and rain, with glossy wet streets, rain sound and greyer skies. You can also pick the weather from the map screen.
+- Cars have see-through windows with seats and drivers, glowing headlights and taillights, and brake lights.
+- Tyre-worn lanes, manhole covers and oil stains on the roads; grass in the park; a hazy skyline across the water.
+- Brick, stone, plaster and glass buildings with shopfronts, awnings, fire escapes and balconies; ambient occlusion, soft shadows, sky lighting, film grain and a full day/night cycle.
+- People have bending knees, and outfits that include jackets, dresses, backpacks and different hairstyles.
+
+## Performance
+
+The game watches its own frame rate. If it drops, it lowers the rendering resolution and then switches off ambient occlusion; it raises them again when there is headroom. Far-away cars and people are hidden, only nearby ones cast shadows, and interiors and the city are never drawn at the same time. Phones start in a lighter graphics mode, and the Graphics button switches between high and low.
 
 ## Built with
 
