@@ -40,6 +40,11 @@ Open the map with **M** to see every mission, set a GPS route, or click anywhere
 
 ## The city
 
+- An island with a big hill in the north-east, a smaller one in the south-west and rolling ground, sloping down to beaches.
+- Streets bend and curve instead of following a grid, with T-junctions, bigger blocks, a curved coastal ring road and a tree-lined diagonal boulevard. Roads climb the hills, and cars tilt, slow down uphill and speed up downhill.
+- Buildings line every street at its own angle and fill the blocks behind: towers downtown, small houses with pitched roofs on the hill, stone plinths where the ground slopes.
+- A central park, a fountain plaza and a hilltop lookout with an observatory.
+
 - Drive on roads, pavements, parks and plazas. Buildings and trees stop you, but lamp posts, bins, mailboxes and hydrants get knocked over (hydrants spray water).
 - Pedestrians walk the pavements, comment as you pass, chat when you press E, and dive out of the way of cars. Nearly hitting someone gets the police interested.
 - Traffic follows the lanes, stops at red lights and honks if you block it.
