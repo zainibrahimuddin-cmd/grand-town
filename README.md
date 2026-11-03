@@ -1,68 +1,78 @@
 # Grand Town
 
-A family-friendly 3D open-world city game that runs in the browser. Drive any car anywhere in an island city, take on missions, chat with the locals and walk into shops, an arcade and your own apartment.
+A 3D open-world city game that runs in the browser. Walk, sprint and drive anywhere on an island city, do missions, buy cars, houses, clothes and gear, and play real arcade games. Your progress is saved in the browser, so closing the tab never resets it.
 
-No weapons and no fighting. Pedestrians dive out of the way of reckless drivers, and the worst the police do is write you a ticket. Suitable for players 16 and under.
+Teen rated (suitable for 16 and under): you can punch people and use bats, stun guns and guns, but there is no blood and nobody dies. People who get hit fall over, get back up and run away (or fight back), and the police come after you.
 
 **Play it:** https://zainibrahimuddin-cmd.github.io/grand-town/
 
 ## Controls
 
-| Key | Action |
-| --- | --- |
-| W A S D / arrow keys | Drive or walk |
-| E | Hop in or out of a car, open doors, talk to people, use things |
-| M | Map and missions (the game pauses) |
-| Space | Handbrake (in a car) or jump (on foot) |
-| Shift | Run |
-| Mouse | Look around. Click the game to capture the mouse, Esc to release it |
-| T (hold) | Fast-forward time |
+| Keyboard and mouse | Controller | Action |
+| --- | --- | --- |
+| W A S D | Left stick | Walk (camera-relative) / drive |
+| Shift | A (hold) | Sprint |
+| Space | X | Jump (on foot) / handbrake (in a car) |
+| C | L3 | Crouch |
+| Mouse | Right stick | Look around (click the game to capture the mouse) |
+| Left click / F | RT | Attack or shoot |
+| Right click | LT | Aim (over-the-shoulder, with a crosshair) |
+| Q / mouse wheel / 1–6 | LB / RB | Switch weapon |
+| R | R3 | Reload |
+| E | Y | Get in and out of cars, doors, shops, talk to people |
+| H | D-pad left | Eat food to heal |
+| M | Start | Map, missions, property, your cars, save |
+| L | Back | Fullscreen (there is also a Fullscreen button) |
 
-On phones and tablets, swipe to look around; on-screen buttons appear for steering, gas, brake and E, plus a Map button.
+In a car the controller uses RT to accelerate, LT to brake or reverse and RB for the handbrake. Shops and arcade games work with the mouse, touch, arrow keys or the D-pad.
+
+On phones and tablets, swipe to look around; on-screen buttons appear for moving, E, attack, jump and weapon switching.
+
+## Saving
+
+Everything is saved automatically in your browser every few seconds and when you close the tab: money, weapons and ammo, armour, food, outfits, cars, houses, arcade high scores, missions, stars, the weather and where you were standing. Press **Continue** on the title screen to pick up where you left off. "Start a new game" on the map screen erases the save.
+
+## Shops and places
+
+- **Bullseye Arms**: baseball bat, golf club, stun gun, pistol, shotgun, SMG, rifle, ammo and body armour.
+- **FreshMart Supermarket**: granola bars, soda, sandwiches and first-aid kits that heal you, energy bars that make you faster, and flowers for your house.
+- **Threads Clothing**: nine outfits. Bought outfits stay in your wardrobe for free.
+- **Prestige Motors**: a showroom of real cars on turntables and nine models to buy, each with its own shape, top speed, acceleration and price, in nine paint colours.
+- **Houses for sale** in the suburbs (green signs): buy one to get a bed that saves the game and fully heals you, a wardrobe, and a garage where you can take out any car you own.
+- **Pixel Palace Arcade**: six playable games (below).
+- **Tony's Pizza** and **your apartment** as before.
+
+From the map screen you can set GPS routes to every place, the cheapest house for sale and your own houses, and have any of your cars delivered next to you.
+
+## Arcade games
+
+All six cabinets are real games with their own high scores and small cash prizes:
+
+- **Star Blaster**: shoot down waves of aliens.
+- **Pizza Dash**: snake, with pizzas (and golden ones worth more).
+- **Robo Kart**: dodge traffic on a speeding road and grab coins.
+- **Space Goose**: flap a goose through the gaps.
+- **Block Drop**: break all the bricks with a paddle and ball.
+- **Neon Rally**: neon tennis against the computer, first to 7.
 
 ## Missions
 
-Open the map with **M** to see every mission, set a GPS route, or click anywhere on the map to drop your own waypoint.
-
-- **Pizza Rush** (Tony's Pizza): deliver a hot pizza before it goes cold. Faster deliveries earn bigger tips. Talk to Tony inside the shop or drive into the orange marker.
-- **Street Race**: bring a car and hit every checkpoint. Beat the par time for the top prize.
-- **Taxi Fares** (Rosa's cab stand): pick up three passengers and drive them to their stops. A real taxi earns 50% more.
-- **Parcel Courier** (QuickShip depot): drop off three parcels around town, in any order, before time runs out.
-- **Lost Puppy** (Mia, in the park): find Biscuit in the search area and walk him home.
-- **Star Hunter**: find all 30 gold stars hidden around town.
-
-## Places you can go inside
-
-- **Tony's Pizza**: talk to Tony for a delivery job.
-- **Corner Market**: buy an energy bar to run faster for a minute.
-- **Pixel Palace Arcade**: play the cabinets and try to beat the high score.
-- **Your apartment**: sleep until morning (this saves the game and clears your wanted level), change your outfit or watch the news.
+- **Pizza Rush**, **Street Race**, **Taxi Fares**, **Parcel Courier**, **Lost Puppy** and **Star Hunter** (30 gold stars).
 
 ## The city
 
-- An island with a big hill in the north-east, a smaller one in the south-west and rolling ground, sloping down to beaches.
-- Streets bend and curve instead of following a grid, with T-junctions, bigger blocks, a curved coastal ring road and a tree-lined diagonal boulevard. Roads climb the hills, and cars tilt, slow down uphill and speed up downhill.
-- Buildings line every street at its own angle and fill the blocks behind: towers downtown, small houses with pitched roofs on the hill, stone plinths where the ground slopes.
-- A central park, a fountain plaza and a hilltop lookout with an observatory.
+- Downtown towers, docks with cranes and containers, hillside streets, a midtown, and leafy suburbs with houses, garages, driveways and picket fences.
+- A highway ring around the island with on and off ramps, overhead signs and fast traffic; avenues, streets and narrow lanes, each with their own width and speed.
+- Hills, beaches, a park, a fountain plaza and a hilltop lookout.
+- Traffic follows its lanes, stops at red lights and includes compacts, saloons, SUVs, pickups, vans, muscle cars, sports cars, luxury cars and the odd hypercar.
 
-- Drive on roads, pavements, parks and plazas. Buildings and trees stop you, but lamp posts, bins, mailboxes and hydrants get knocked over (hydrants spray water).
-- Pedestrians walk the pavements, comment as you pass, chat when you press E, and dive out of the way of cars. Nearly hitting someone gets the police interested.
-- Traffic follows the lanes, stops at red lights and honks if you block it.
-- Crash into cars to raise your wanted level. Escape the police, or hide inside a building to lose them faster.
+## Characters and movement
+
+- Every person is a skinned 3D model with a skeleton (hips, spine, arms, hands, legs and feet), different outfits, hair and body sizes.
+- Smooth walk, run and sprint cycles, crouch-walking, jumping and landing, punches, kicks, bat swings, aiming poses, and knock-downs.
+- Camera-relative movement with acceleration, an over-the-shoulder aiming camera and a camera that swings behind your car.
 
 ## Graphics
 
-- Every window has a 3D room behind it (walls, floor, furniture, office ceiling lights) that lights up at night.
-- Weather changes by itself: sunny, cloudy and rain, with glossy wet streets, rain sound and greyer skies. You can also pick the weather from the map screen.
-- Cars have see-through windows with seats and drivers, glowing headlights and taillights, and brake lights.
-- Tyre-worn lanes, manhole covers and oil stains on the roads; grass in the park; a hazy skyline across the water.
-- Brick, stone, plaster and glass buildings with shopfronts, awnings, fire escapes and balconies; ambient occlusion, soft shadows, sky lighting, film grain and a full day/night cycle.
-- People have bending knees, and outfits that include jackets, dresses, backpacks and different hairstyles.
-
-## Performance
-
-The game watches its own frame rate. If it drops, it lowers the rendering resolution and then switches off ambient occlusion; it raises them again when there is headroom. Far-away cars and people are hidden, only nearby ones cast shadows, and interiors and the city are never drawn at the same time. Phones start in a lighter graphics mode, and the Graphics button switches between high and low.
-
-## Built with
-
-[three.js](https://threejs.org/) r160, in a single HTML file with no build step. Progress (money, stars, missions completed) is saved in your browser.
+- Renders at full HD (1080 lines) on the high setting, and lowers the resolution automatically if the frame rate drops.
+- Rooms behind every window, day and night, rain with wet streets, ambient occlusion, soft shadows, bloom and film grain.
